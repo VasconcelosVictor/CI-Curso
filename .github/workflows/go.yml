@@ -31,12 +31,7 @@ jobs:
       
     - name: Create-DB
       run: docker-compose up -d
-
-    - name: Wait for DB
-      run: |
-        until docker exec postgres:latest pg_isready; do
-          sleep 1
-        done
+      
 
     - name: Test
       run: go test -v main_test.go 
