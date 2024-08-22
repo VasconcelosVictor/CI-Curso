@@ -35,6 +35,16 @@ jobs:
 
     - name: Test
       run: go test -v main_test.go 
+
+  print-db-info:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Database Info
+      run: |
+        echo "Database Name: root"
+        echo "User: root"
+        echo "Password: root"      
       
   build:
     needs: test
