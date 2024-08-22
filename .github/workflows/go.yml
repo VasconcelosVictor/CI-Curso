@@ -34,7 +34,7 @@ jobs:
 
     - name: Wait for DB
       run: |
-        until docker exec postgres pg_isready; do
+        until docker exec postgres:latest pg_isready; do
           sleep 1
         done
 
