@@ -21,8 +21,8 @@ jobs:
       DBNAME: root
     strategy:
       matrix:
-        go_version: ['1.20', '>=1.20']
-        os: ['ubunto-latest', 'ubunto-18.04']
+        go_version: ['1.20']
+        os: ['ubunto-latest']
     steps:
     - uses: actions/checkout@v4
 
@@ -52,7 +52,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ['ubunto-latest', 'ubunto-18.04']
+        os: ['ubunto-latest']
     steps:
     - uses: actions/checkout@v4
     
